@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Truong Quang Thuong – game developer and designer</title>
-<meta name="description" content="Portfolio of Truong Quang Thuong, game developer and designer working in Unity and C#. Featured project: Neon Blocks, a versus block-stacking game with an AI opponent.">
+<meta name="description" content="Portfolio of Truong Quang Thuong, game developer and designer working in Unity and C#. Projects: Neon Blocks and UniBoom 3D.">
 <meta property="og:title" content="Truong Quang Thuong – game developer and designer">
 <meta property="og:image" content="neon-blocks-poster.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@ a:focus-visible{outline:3px solid #16202B;outline-offset:3px}
 <h1 style="margin: 0; font-size: clamp(40px, 5.2vw, 66px); line-height: 1.02; font-weight: 800; letter-spacing: -0.025em">I build the systems that make games feel good to play.</h1>
 <p style="margin: 0; max-width: 34em; color: #3A4A5C">I design and prototype games in Unity and C#, from the first playable idea to AI opponents and online multiplayer.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
-<a href="#projects" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: #16202B; color: #FFFFFF; text-decoration: none; font-weight: 700; border-radius: 6px">See Neon Blocks</a>
+<a href="#projects" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: #16202B; color: #FFFFFF; text-decoration: none; font-weight: 700; border-radius: 6px">See my projects</a>
 <a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 2px solid #16202B; color: #16202B; text-decoration: none; font-weight: 700; border-radius: 6px">Contact me</a>
 </div>
 </div>
@@ -50,7 +50,7 @@ a:focus-visible{outline:3px solid #16202B;outline-offset:3px}
 
 <section id="projects" style="background: #FFFFFF; padding: 96px 32px">
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 112px">
-<h2 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Featured project</h2>
+<h2 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Projects</h2>
 
 <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 48px; align-items: start">
 <div style="display: flex; flex-direction: column; gap: 16px">
@@ -85,6 +85,36 @@ a:focus-visible{outline:3px solid #16202B;outline-offset:3px}
 <p style="margin: 0; color: #3A4A5C"><strong style="color: #16202B">Keeping the AI beatable.</strong> A placement-scoring AI plays close to perfectly, and casual players stop having fun when they can’t win. I gave it human limits instead: slower reactions, a chance to choose a weaker move on lower difficulties, and a gradual speed-up so every match builds tension instead of starting at full pressure.</p>
 </div>
 <p style="margin: 0; font-size: 15px; color: #4A5868">Source code and a playable build are available on request for interviews.</p>
+</div>
+</article>
+
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 48px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h3 style="margin: 0; font-size: 32px; line-height: 1.1; font-weight: 800; letter-spacing: -0.015em">UniBoom 3D</h3>
+<p style="margin: 0; font-size: 19px; color: #3A4A5C">A turn-based artillery game in 3D. Pick a class, explore the world map, then aim, charge and fire across 3D terrain against monsters and a dragon boss.</p>
+<dl style="margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; padding: 20px 0; border-top: 1px solid #D5DCE3; border-bottom: 1px solid #D5DCE3">
+<div><dt style="font-size: 14px; color: #4A5868">My role</dt><dd style="margin: 0; font-weight: 700">Gameplay programmer</dd></div>
+<div><dt style="font-size: 14px; color: #4A5868">Team</dt><dd style="margin: 0; font-weight: 700">2 people</dd></div>
+<div><dt style="font-size: 14px; color: #4A5868">Engine and tools</dt><dd style="margin: 0; font-weight: 700">Unity 6, C#, Cinemachine, PlayFab</dd></div>
+<div><dt style="font-size: 14px; color: #4A5868">Timeframe</dt><dd style="margin: 0; font-weight: 700">7 months, capstone project</dd></div>
+</dl>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h4 style="margin: 0; font-size: 18px; font-weight: 700">What I built</h4>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #3A4A5C">
+<li>Game flow: the path from the world map and NPC quests into battle, the turn order between the player’s team and the enemies, and win, lose and wave transitions.</li>
+<li>The shooting system: angle and power aiming in 3D, shells that fly on a real arc, raycast hit detection so fast shots never pass through thin objects, and area damage that hits each target only once.</li>
+<li>Enemy AI that takes turns one by one and aims with adjustable error, so each shot either hits or lands just short.</li>
+<li>The skill system: six skills, from rocket barrages and fire attacks to heal and shield, paid for with turn energy.</li>
+</ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h4 style="margin: 0; font-size: 18px; font-weight: 700">Design decision</h4>
+<p style="margin: 0; color: #3A4A5C">An AI that calculates the perfect arc every turn would win every match and feel unfair. I gave its aim tunable variables, so enemies sometimes land a direct hit and sometimes just miss. Near misses keep the player under pressure while leaving room to recover, which makes each enemy turn tense instead of predictable.</p>
+</div>
+<p style="margin: 0; font-size: 15px; color: #4A5868">Tech demo built as my graduation capstone at VTC Academy. A playable build is available on request.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<video src="uniboom-demo.mp4" poster="uniboom-poster.jpg" controls playsinline preload="metadata" aria-label="UniBoom 3D demo: aiming, skills, enemy AI turns and world map" style="display: block; width: 100%; aspect-ratio: 16 / 9; background: #1D2733; border-radius: 4px; border-bottom: 6px solid #E8A317"></video>
 </div>
 </article>
 
